@@ -94,6 +94,7 @@
   .btn-outline{border:1.5px solid var(--line); color:var(--ink); background:#fff;}
   .btn-outline:hover{border-color:var(--primary); color:var(--primary-dark);}
   .btn-sm{padding:9px 18px; font-size:13.5px;}
+  .btn-icon{width:18px; height:18px;}
 
   .burger{display:none; width:42px; height:42px; border-radius:10px; background:var(--primary-light); align-items:center; justify-content:center;}
   .burger span, .burger span::before, .burger span::after{
@@ -135,7 +136,7 @@
     box-shadow:var(--shadow);
     display:flex; align-items:flex-end; justify-content:center; overflow:hidden;
   }
-  .doctor-frame svg{width:100%; height:100%;}
+  .doctor-frame svg, .doctor-frame img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .float-card{
     position:absolute; background:#fff; border-radius:16px; box-shadow:var(--shadow-sm);
     padding:14px 18px; display:flex; align-items:center; gap:10px; z-index:3; font-size:13.5px; font-weight:600;
@@ -160,9 +161,10 @@
     margin-bottom:22px;
   }
   .feat-icon svg{width:26px; height:26px;}
-  .feat-card.whatsapp .feat-icon{background:#e5f9ee; color:#1eb15a;}
-  .feat-card.appointment .feat-icon{background:var(--primary-light); color:var(--primary);}
-  .feat-card.pricing .feat-icon{background:#fff1e8; color:var(--accent-dark);}
+  .feat-icon img{width:24px; height:24px;}
+  .feat-icon.icon-whatsapp{background:#25D366;}
+  .feat-icon.icon-calendar{background:var(--primary);}
+  .feat-icon.icon-dollar{background:var(--accent);}
   .feat-card h3{font-size:19px; font-weight:700; margin-bottom:10px;}
   .feat-card p{color:var(--gray); font-size:14.5px; margin-bottom:20px;}
   .feat-link{font-size:14px; font-weight:700; color:var(--primary-dark); display:inline-flex; align-items:center; gap:6px;}
@@ -201,7 +203,7 @@
     background:linear-gradient(160deg,#fff, #eaf6f8);
     box-shadow:var(--shadow); position:relative;
   }
-  .about-photo-box svg{width:100%; height:100%;}
+  .about-photo-box svg, .about-photo-box img{width:100%; height:100%; object-fit:cover; object-position:top center;}
   .about-badge{
     position:absolute; bottom:-22px; inset-inline-start:-22px; background:#fff; border-radius:18px;
     padding:16px 20px; box-shadow:var(--shadow-sm); display:flex; align-items:center; gap:12px;
@@ -266,7 +268,7 @@
   .contact-card h3{font-size:24px; font-weight:800; margin-bottom:10px;}
   .contact-card p{color:rgba(255,255,255,0.85); font-size:14.5px; margin-bottom:28px;}
   .contact-row{display:flex; align-items:flex-start; gap:14px; margin-bottom:20px;}
-  .contact-row svg{width:20px; height:20px; flex-shrink:0; margin-top:2px;}
+  .contact-row svg, .contact-row img.row-icon{width:20px; height:20px; flex-shrink:0; margin-top:2px;}
   .contact-row b{display:block; font-size:14px; font-weight:600;}
   .contact-row span{font-size:13.5px; color:rgba(255,255,255,0.8);}
   .map-frame{border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--line); min-height:340px;}
@@ -277,9 +279,12 @@
   .footer-brand{display:flex; align-items:center; gap:10px; font-weight:700; color:var(--primary-darker);}
   .footer-note{font-size:13px; color:var(--gray-light);}
   .social{display:flex; gap:10px;}
-  .social a{width:38px; height:38px; border-radius:50%; background:var(--primary-light); display:flex; align-items:center; justify-content:center; color:var(--primary-dark); transition:.25s;}
-  .social a:hover{background:var(--primary); color:#fff;}
-  .social svg{width:17px;height:17px;}
+  .social a{width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition:transform .25s ease, opacity .25s ease;}
+  .social a:hover{transform:translateY(-3px); opacity:.9;}
+  .social img{width:17px;height:17px;}
+  .social-whatsapp{background:#25D366;}
+  .social-instagram{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);}
+  .social-phone{background:var(--primary);}
 
   .wa-float{
     position:fixed; bottom:24px; inset-inline-start:24px; z-index:900;
@@ -287,7 +292,7 @@
     box-shadow:0 12px 30px -8px rgba(37,211,102,0.6);
     animation:pulse 2.6s infinite;
   }
-  .wa-float svg{width:30px;height:30px; color:#fff;}
+  .wa-float img{width:28px;height:28px;}
   @keyframes pulse{
     0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5);}
     70%{box-shadow:0 0 0 16px rgba(37,211,102,0);}
